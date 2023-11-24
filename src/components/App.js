@@ -1,28 +1,20 @@
 import React from 'react';
 import NavBar from './NavBar';
-import Home from './Home';
-import About from './About';
 import ProjectList from './ProjectList';
 
-const projectsData = [
-  {
-    id: 1,
-    technologies: ['React', 'JavaScript', 'CSS'],
-  },
-  {
-    id: 2,
-    technologies: ['Node.js', 'Express', 'MongoDB'],
-  },
-  // Add more projects as needed
-];
-
 const App = () => {
+  const navLinks = ['Home', 'About', 'Contact'];
+  
+  const projects = [
+    { id: 1, technologies: ['React', 'Node.js'] },
+    { id: 2, technologies: ['Angular', 'Express'] },
+    // Add more projects as needed
+  ];
+
   return (
     <div>
-      <NavBar />
-      <Home />
-      <About />
-      <ProjectList projects={projectsData} />
+      <NavBar links={navLinks} />
+      <ProjectList projects={projects} />
     </div>
   );
 };
